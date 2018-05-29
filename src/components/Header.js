@@ -1,14 +1,17 @@
 import React from "react";
 import "../App.css";
+import SubHeader from './SubHeader';
+import TopNav from './TopNav';
 
-const Header = () => {
+
+const Header = (props) => {
   return (
     <div className="header">
 	
       <div className="top-header">
         <div className="top-header-left">
           <ul>
-            <li className="active"><a href="#">afsad</a></li>
+            <li className="active"><a href="#">Home</a></li>
             <li><a href="#">Specials</a></li>
             <li><a href="#">Delivery</a></li>
             <li><a href="#">Contact</a></li>
@@ -26,23 +29,16 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="clear"> </div>
+        <div className="clear" />
       </div>
-      <div className="clear"> </div>
+      <div className="clear" />
+
+      <SubHeader />
+
+      <div className="clear" />
       
-      <div className="clear"> </div>
-      <div className="top-nav">
-        <ul>
-          <li><a href="carlights.html">car lights</a></li>
-          <li><a href="carwheels.html">Car wheels</a></li>
-          <li><a href="carbumpers.html">car bumpers</a></li>
-          <li><a href="caradsystem.html">car audiosystem</a></li>
-          <li><a href="truckbumpers.html">Truck bumpers</a></li>
-          <li><a href="contact.html">Feedback</a></li>
-          <div className="clear"> </div>
-        </ul>
-      </div>
-		
+      <TopNav currentCategory={props.currentCategory} />
+
     </div>
   );
 };
