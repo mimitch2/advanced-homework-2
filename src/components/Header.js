@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import SubHeader from './SubHeader';
 import TopNav from './TopNav';
-
+import PropTypes from 'prop-types';
 
 const Header = (props) => {
   return (
@@ -37,10 +37,13 @@ const Header = (props) => {
 
       <div className="clear" />
       
-      <TopNav currentCategory={props.currentCategory} />
+      <TopNav changeCategory={props.changeCategory} />
 
     </div>
   );
 };
 
+Header.propTypes = {
+  changeCategory: PropTypes.func.isRequired
+};
 export default Header;

@@ -6,12 +6,10 @@ import state from "./state";
 
 let currentCategory = "tires";
 
-const changeCategory = (category) => {
+function changeCategory(category) {
   currentCategory = category;
   render();
-};
-
-
+}
 
 
 function render() {
